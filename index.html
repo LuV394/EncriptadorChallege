@@ -1,37 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Encriptador de texto</title>
-</head>
-<body>
-    <div class="container">
-        <div class="encriptar">
-            <textarea class="texto" name="texto" id="texto" cols="30" rows="10" placeholder="Ingresa el texto aquí"></textarea>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="./assets/imgs/logo.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Encryptador de Texto</title>
+  </head>
+  <body>
+    <main class="container">
+      <header class="logo">
+        <h1>
+          <img src="./assets/imgs/logo.svg" alt="Logo Alura" />
+        </h1>
+      </header>
+      <section class="mensaje">
+        <div class="textarea-container">
+          <textarea
+            class="input-mensaje"
+            placeholder="Ingrese el texto aquí"
+            onkeydown="handleInput()"></textarea>
+          <button onclick="cleanText()" class="clean button">
+            <img src="./assets/imgs/trash.svg" alt="Icono de una papelera" />
+          </button>
         </div>
-        <div class="terminos">
-            <p>Solo letras minusculas y sin acentos</p>
-        </div>
-        <div class="botones">
-            <button class="btn-encriptar" type="button" onclick="encriptar">Encriptar</button>
-            
-            <button class="btn-desencriptar" type="button" onclick="encriptar">Desencriptar</button>
-        </div>
-    
 
-    <div class="encriptado">
-        <img src="" alt="" id="personaje">
-        <div class="mensaje-encriptado">
-            <h2 id="titulo-mensaje">Ningun mensaje encontrado</h2>
-            <p id="parrafo">Ingresa el texto que deseas encriptar o desencriptar</p>
-            <textarea class="mensaje" name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+        <div class="buttons-container">
+          <div class="warning">
+            <img src="./assets/imgs/info.svg" alt="Info icon" />
+            <p class="warn-msg">Sólo letras minúsculas y sin acentos</p>
+          </div>
+          <div class="buttons">
+            <button onclick="processMsg()" class="encrypt button">Encriptar</button>
+            <button onclick="processMsg('decrypt')" class="decrypt button light-blue">
+              Desencriptar
+            </button>
+          </div>
         </div>
-    </div>
-    </div>
-
-    
-</body>
+      </section>
+      <section id="output" class="encrypted-container">
+        <div class="encrypted-empty show">
+          <img
+            class="search-img"
+            src="./assets/imgs/search-img.svg"
+            alt="Imagen de lupa" />
+          <p class="mensaje-title">Ningún mensaje fue encontrado</p>
+          <p class="mensaje-text">
+            Ingresa el texto que desees encriptar o desencriptar.
+          </p>
+        </div>
+        <div class="output-mensaje">
+          <div class="crypted-mensaje" placeholder="Mensaje encriptado" readonly></div>
+          <button onclick="copyMsg()" class="copy button light-blue">Copiar</button>
+        </div>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
 </html>
