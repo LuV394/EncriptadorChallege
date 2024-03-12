@@ -1,60 +1,44 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="./assets/imgs/logo.svg" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Encryptador de Texto</title>
-  </head>
-  <body>
-    <main class="container">
-      <header class="logo">
-        <h1>
-          <img src="./assets/imgs/logo.svg" alt="Logo Alura" />
-        </h1>
-      </header>
-      <section class="mensaje">
-        <div class="textarea-container">
-          <textarea
-            class="input-mensaje"
-            placeholder="Ingrese el texto aquí"
-            onkeydown="handleInput()"></textarea>
-          <button onclick="cleanText()" class="clean button">
-            <img src="./assets/imgs/trash.svg" alt="Icono de una papelera" />
-          </button>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Encriptador de Texto</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Imagenes/Logo.svg" alt="" class="img-logo">
         </div>
+    </header>
 
-        <div class="buttons-container">
-          <div class="warning">
-            <img src="./assets/imgs/info.svg" alt="Info icon" />
-            <p class="warn-msg">Sólo letras minúsculas y sin acentos</p>
-          </div>
-          <div class="buttons">
-            <button onclick="processMsg()" class="encrypt button">Encriptar</button>
-            <button onclick="processMsg('decrypt')" class="decrypt button light-blue">
-              Desencriptar
-            </button>
-          </div>
+    <main>
+       <section class="Container">
+        <div class="input-mensaje">
+            <textarea name="" id="mensaje" class="mensaje" placeholder="Ingrese texto aqui"></textarea>
         </div>
-      </section>
-      <section id="output" class="encrypted-container">
-        <div class="encrypted-empty show">
-          <img
-            class="search-img"
-            src="./assets/imgs/search-img.svg"
-            alt="Imagen de lupa" />
-          <p class="mensaje-title">Ningún mensaje fue encontrado</p>
-          <p class="mensaje-text">
-            Ingresa el texto que desees encriptar o desencriptar.
-          </p>
+        <label for="" class="advertencia"><img src="Imagenes/alerta.svg" alt="">Solo letras minusculas y sin acentos</label>
+        <div class="botones">
+            <button class="btn-encriptar">Encriptar</button>
+            <button class="btn-desencriptar">Desencriptar</button>
         </div>
-        <div class="output-mensaje">
-          <div class="crypted-mensaje" placeholder="Mensaje encriptado" readonly></div>
-          <button onclick="copyMsg()" class="copy button light-blue">Copiar</button>
+       </section>
+       <section class="Encriptado">
+        <div class="textoEncriptado">
+            <img src="Imagenes/Personaje.svg" alt="" class="personaje">
+            <h1>Ningun mensaje fue encontrado</h1>
+            <p>Ingresa el texto que desees encriptar o desencriptar</p>
         </div>
-      </section>
+       </section>
     </main>
-    <script src="./script.js"></script>
-  </body>
+    <footer>
+    </footer>
+</body>
+<script src="script.js"></script>
 </html>
+
