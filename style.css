@@ -206,10 +206,50 @@ main{
 }
 
 
-@media (max-width: 576px) {
-    .container{
-        display: flex;
-        flex-direction: column;
+@media (max-width: 576px) {    
+main {
+    flex-direction: column;
+    align-items: center;
+}
 
-    }
+.Container {
+    width: 100%;
+    margin: 0;
+}
+
+.Encriptado {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.input-mensaje {
+    margin: 20px 10px;
+    width: 80%;
+}
+
+.advertencia{
+    width: 80%;
+    margin: 20px 10px;
+}
+
+.botones {
+    width: 80%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 10px; 
+    margin: 0 auto;
+}
+
+.btn-encriptar,
+.btn-desencriptar {
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+.textoEncriptado {
+    width: 80%;
+}
+}
+
 }
