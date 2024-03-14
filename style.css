@@ -66,6 +66,7 @@ main{
     width: 80%;
     left: 12%;
     top: 80%;
+
 }
 
 .botones{
@@ -123,6 +124,7 @@ main{
 
 .Encriptado{
     width: 300px;
+    height: 600px;
     display: inline-block;
     vertical-align: top;
     background-color: #ffffff;
@@ -149,19 +151,35 @@ main{
 }
 
 .textoEncriptado h1{
-    text-align: center;
-    font-size: 25px;    
+    width: 300px;
+    height: 58px;    
     font-family: 'Inter';
     font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #343A40;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;    
 }
 
 .textoEncriptado p{
-    text-align: center;
-    margin: 0px 15px;
-    font-size: 15px;    
+    width: 300px;
+    height: 48px;    
     font-family: 'Inter';
-    font-style: normal;   
-    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;/
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;    
 }
 
 .personaje{
@@ -205,6 +223,13 @@ main{
     transform: scale(1.2); 
 }
 
+.pie-pagina{
+    display: block;
+    justify-content: center;
+    height: auto;
+    position: relative;
+}
+
 
 @media (max-width: 576px) {    
     main {
@@ -222,6 +247,22 @@ main{
         margin: 20px 0;
     }
 
+    .textoEncriptado{   
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 32px;
+        gap: 32px;
+        position: absolute;
+        width: 327px;
+        height: 186px;
+        left: 24px;
+        top: 707px;
+        background: #FFFFFF;
+        box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+        border-radius: 32px;
+    }
+
     .input-mensaje {
         margin: 20px 10px;
         width: 80%;
@@ -229,22 +270,30 @@ main{
 
     .advertencia{
         width: 80%;
-        margin: 20px 10px;
+        margin: 1px 10px;
     }
 
-    .botones {
-        width: 80%;
+    .botones {/
         display: flex;
-        flex-direction: column; 
-        align-items: center; 
-        gap: 10px; 
-        margin: 0 auto;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 24px;
+        position: absolute;
+        width: 343px;
+        height: 158px;
+        left: 16px;
+        top: 485px;        
     }
 
     .btn-encriptar,
     .btn-desencriptar {
         width: 100%;
         box-sizing: border-box; 
+    }
+
+    .personaje{
+        display: none;
     }
 
     .textoEncriptado {
